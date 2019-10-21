@@ -7,4 +7,11 @@ class CommentForm(FlaskForm):
 
 class UpdateProfile(FlaskForm):
     bio = TextAreaField('Tell us about you.')
-    submit = SubmitField('Submit')    
+    submit = SubmitField('Submit')  
+
+class PitchForm(FlaskForm):
+
+    title = StringField('Pitch title')
+    category = SelectField(u'Pitch Category', choices=[('poetry', 'poetry'), ('funny', 'funny'), ('brainy', 'brainy'),('inspiring', 'inspiring')])
+    content = TextAreaField('Pitch Body')
+    submit = SubmitField('Submit')      
