@@ -12,6 +12,6 @@ class UpdateProfile(FlaskForm):
 class PitchForm(FlaskForm):
 
     title = StringField('Pitch title')
-    category = SelectField(u'Pitch Category', choices=[('poetry', 'poetry'), ('funny', 'funny'), ('brainy', 'brainy'),('inspiring', 'inspiring')])
+    category = SelectField(u'Pitch Category', choices=[('poetry', 'poetry'), ('funny', 'funny'), ('brainy', 'brainy'),('hit_line', 'hit_line')])
     content = TextAreaField('Pitch Body')
     submit = SubmitField('Submit')      
