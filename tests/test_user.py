@@ -5,3 +5,6 @@ class UserModelTest(unittest.TestCase):
 
     def setUp(self):
         self.new_user = User(password = 'pitch')
+
+    def test_password_setter(self):
+        self.assertTrue(self.new_user.password_secure is not None)     
