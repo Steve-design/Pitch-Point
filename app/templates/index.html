@@ -1,0 +1,61 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+
+<body>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+
+    <h3 style="text-align:center; color:#0d47a1" class="display-3"> Experience Pitch Point</h3>
+    <p style="text-align:left; color:#0d47a1" class="display-4">Select by category</p>
+
+    <button type="button" class="btn btn-outline-primary"><a href="/pitch/">New Pitch</a></button>
+
+    <button type="button" class="btn btn-outline-success"><a href="/category/poetry">View Poetry Pitches</a></button>
+    <button type="button" class="btn btn-outline-danger"><a href="/category/funny">Funny Pitches</a></button>
+
+    <button type="button" class="btn btn-outline-info"><a href="/category/brainy">Brainy Pitches</a></button>
+    <button type="button" class="btn btn-outline-warning"><a href="/category/hit_lines">Hit Lines</a></button>
+
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="card-columns">
+
+      {% for item in pitches %}
+
+      <div class="card border-secondary">
+        <div class="card-header">
+          <h5>{{item.pitch_title}}</h5>
+        </div>
+
+        <div class="card-body text-secondary">
+          <p class="card-text">{{item.pitch_content}}</p>
+        </div>
+
+        <a href="/view/{{ item.id }}" class="btn btn-primary">Upvote</a>
+
+
+        <button type="button" class="btn btn-outline-primary"><a href="/pitch/{{item.id}}">Comment</a></button>
+
+
+        {{ item.likes }}<i class="fa fa-star-o"></i> likes
+        </a>
+        <br>
+
+        <footer class="blockquote-footer"> <cite title="Source Title">Category: {{item.pitch_category}} </cite></footer>
+
+      </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+  {% endblock%}
+</body>
