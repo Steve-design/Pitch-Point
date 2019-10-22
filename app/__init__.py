@@ -18,3 +18,6 @@ simple = SimpleMDE()
 bootstrap = Bootstrap()
 db = SQLAlchemy()
 mail = Mail()
+
+
+def create_app(config_name):
