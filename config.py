@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://nancy:mxmxmx@localhost/pitch'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://nancy:pitch@localhost/pitch'
 
     SECRET_KEY = os.environ.get('SECRET_KEY')
     UPLOADED_PHOTOS_DEST ='app/static/photos'
@@ -32,7 +32,7 @@ class ProdConfig(Config):
     DEBUG =  True    
 
 class DevConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://nancy:mxmxmx@localhost/pitch'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://nancy:pitch@localhost/pitch'
 
     '''
     
