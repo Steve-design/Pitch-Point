@@ -22,7 +22,7 @@ mail = Mail()
 
 def create_app(config_name):
 
-     bootstrap = Bootstrap()
+    bootstrap = Bootstrap()
 
     app = Flask(__name__)
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
