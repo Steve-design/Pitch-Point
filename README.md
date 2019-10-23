@@ -37,6 +37,7 @@ Build & Deployment
 
 ## Live Link
    
+  https://mzalendo-pitch-point.herokuapp.com/ 
 
    ## Technologies Used
 
